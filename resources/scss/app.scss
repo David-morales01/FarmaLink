@@ -1,9 +1,48 @@
-.header {
-    background: linear-gradient(90deg, #4A4CC7 0%, #814AC7 99.51%);
-}
-.import-flex{
-    display: flex !important;
-}
-.custom-gradient{
-    background:  linear-gradient(146deg,#4B52C8 7.07%,#7A3ABC 73.05%);
-}
+    .header {
+        background: linear-gradient(90deg, #4A4CC7 0%, #814AC7 99.51%);
+    }
+    
+    .import-flex {
+        display: flex !important;
+    }
+    
+    .custom-gradient {
+        background: linear-gradient(146deg, #4B52C8 7.07%, #7A3ABC 73.05%);
+    }
+    
+    header {
+        @media screen and (max-width: 1024px) {
+            .sub-menu {
+                transition: 0s ease-in-out;
+                inset: 0;
+                position: fixed;
+                z-index: 3;
+                width: 50vw;
+                height: 100vh;
+                background: #491d81;
+                padding: 20vw 6vw;
+                flex-direction: column;
+                transform: translateX(-100vw);
+                &::after {
+                    transform: translateX(-100vw);
+                    z-index: 2;
+                    content: "";
+                    inset: 0;
+                    z-index: -2;
+                    width: 200vw;
+                    background: #00000015;
+                    height: 100vh;
+                    display: flex;
+                    transition: 0s ease-in-out;
+                    position: absolute;
+                }
+            }
+            .open-menu .sub-menu {
+                transition: 1s ease-in-out;
+                transform: translateX(0vw);
+                &::after {
+                    transform: translateX(0vw);
+                }
+            }
+        }
+    }
