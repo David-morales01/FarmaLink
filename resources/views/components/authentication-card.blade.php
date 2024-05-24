@@ -8,7 +8,7 @@
         <div class=" mt-6 w-[90%] md:w-[70%] py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
 
             <div class="flex justify-center">
-              <x-nav-link  wire:navigate aria-label="home" href="/">
+              <x-nav-link  href="/" wire:navigate aria-label="home">
                 {{ $logo }}
               </x-nav-link>
             </div>
@@ -19,4 +19,4 @@
             </div>
         </div>
     </div>
-</div> 
+</div>

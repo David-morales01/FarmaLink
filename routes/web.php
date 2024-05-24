@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\MedicationDetail;
+use App\Livewire\MedicationList;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,3 +17,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/medication/{id}',MedicationDetail::class)->name("medication");
+
+
